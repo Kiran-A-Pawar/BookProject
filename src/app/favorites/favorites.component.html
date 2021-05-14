@@ -1,0 +1,53 @@
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<body>
+  
+  <table  class="table table-striped">
+    <thead>
+      <tr>
+        <th>
+          Name
+        </th><th>
+        Price
+      </th>
+      <th>
+        Book-Author
+      </th>
+
+      <th>
+        Add to favorites
+    </th>
+      
+      <th>
+          Book Image
+      </th>
+
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+    <td> {{bookDetails.name}}</td>
+    <td> {{bookDetails.price}}</td>
+    <td> {{bookDetails.book_author}}</td>
+
+   <!-- <button   class="btn btn-primary" type="submit">Add to favorites</button> -->
+
+
+   <td> 
+
+    <form>
+     <!-- <button  (click)=" UpdateBook()" class="btn btn-primary" type="submit">Add to favorites</button> 
+     <button type="button" (click)="UpdateValue()">SetValue</button>  -->
+
+    <button   (click)="UpdateBooks(bookDetails.bookId)"  class= "btn btn-primary" type="submit"> Add to favorites </button>  
+
+   </form>
+   </td> 
+   
+
+   <td> <img src="{{bookDetails.book_image}}" alt="" > </td>
+
+       </tr>
+       </tbody>    
+  </table>
+</body>

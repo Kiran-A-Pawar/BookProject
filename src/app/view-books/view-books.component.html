@@ -1,0 +1,53 @@
+
+<h1>Showing This Books</h1>
+
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <body>
+    <button (click)="getUser()"  class="btn btn-danger">Get Books</button>
+
+    <table  class="table table-striped">
+      <thead>
+        <tr>
+          <th>
+            Name
+          </th><th>
+          Price
+        </th>
+        <th>
+          Book-Author
+        </th>
+        
+        <th>
+            Picture
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <tr *ngFor= "let user of data | paginate : { id : 'listing_pagination',
+      itemsPerPage : 10,
+      currentPage : page,
+      totalItems : totalRecords }">
+      <td> {{user.name}}</td>
+     <td> {{user.price}}</td>
+     <td> {{user.book_author}}</td>
+     
+     <td> <img src="{{user.book_image}}" alt="" > </td>
+         </tr>
+         </tbody>    
+    </table>
+
+    <pagination-controls  id="listing_pagination"
+    (pageChange)="page = $event "
+    
+    maxSize="9"
+    directionLinks="true"
+    autoHide="true"
+    responsive="true"
+    previousLabel="Previous"
+    nextLabel="Next">
+</pagination-controls> 
+
+</body>

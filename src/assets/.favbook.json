@@ -1,0 +1,14 @@
+{
+  "Favbook": [
+  
+   
+    {"price":"759.00", "isFavorites": false,"book_author":"Arvid","book_image":"http://placeimg.com/640/480/people","name":"Intelligent Plastic Table","createdAt":"2021-05-12T18:23:07.423Z","id":"1"},{"price":"688.00","book_author":"Osborne","book_image":"http://placeimg.com/640/480/people","name":"Fantastic Cotton Tuna","createdAt":"2021-05-12T14:39:11.250Z","id":"2"}
+     
+
+  ],
+  
+  "comments": [
+    {  "id" : 1, "body" : "some content" , "postid":1}
+],
+"profile" : {"name":"typicode"}
+}
